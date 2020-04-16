@@ -64,12 +64,12 @@ sleep 30;
 # Setup EAS cpusets values for better load balancing
 	echo 0-7 > /dev/cpuset/top-app/cpus
 	echo 0-3,5-6 > /dev/cpuset/foreground/cpus
-	echo 0-1 > /dev/cpuset/background/cpus
+	echo 0-3 > /dev/cpuset/background/cpus
 	echo 0-3 > /dev/cpuset/system-background/cpus
-	echo 0-3 > /dev/cpuset/display/cpus
+	echo 0-7 > /dev/cpuset/display/cpus
 
 # For better screen off idle
-	echo 0-3 > /dev/cpuset/restricted/cpus
+#	echo 0-3 > /dev/cpuset/restricted/cpus
 
 # Tune FS
 	echo 3000 > /proc/sys/vm/dirty_expire_centisecs
